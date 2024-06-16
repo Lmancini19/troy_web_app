@@ -1,0 +1,83 @@
+/* 
+Theme Name: TroyWeb Applicant
+Description: Custom theme for TroyWeb Applicant
+Version: 1.0
+Author: Laura Mancini */
+
+/* Define global styles for H1 */
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #E77436; /* Brand Orange */
+}
+
+/* Define global styles for H2 */
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #29292E; /* Brand Dark */
+}
+
+/* Define global styles for H3 */
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 1.5px;
+    color: #FFFFFF; /* White */
+}
+
+/* Define global styles for large body copy */
+.large-body-copy {
+    font-family: 'Oldenburg', sans-serif;
+    font-size: 36px;
+    color: #474852; /* Grey */
+}
+
+/* Define global styles for body copy */
+body {
+    font-family: 'Oldenburg', sans-serif;
+    font-size: 22px;
+    color: #FFFFFF; /* White */
+}
+
+.header-buttons a {
+    text-decoration: none;
+}
+
+/* Menu Items Styling */
+.menu-item {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #29292E;
+    margin-right: 20px;
+}
+
+.menu-item:hover {
+    color: #e77436;
+}
+
+/* Button Styling */
+.button {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    background-color: #e77436;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    color: #e77436;
+    background-color: #FFFFFF;
+    border: 3px solid #e77436;
+}
