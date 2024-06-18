@@ -121,12 +121,12 @@ body {
 
 .acf {
     position: relative;
-    height: 100vw;
+    height: 200px;
 }
 
 .acf-copy {
     position: absolute;
-    bottom: 95%;
+    bottom: 80%;
     right: 20%;
 }
 
@@ -189,3 +189,22 @@ body {
     margin-right: 5px; 
     white-space: nowrap; 
 }
+
+.about-me {
+    position: absolute;
+    right: 10%;
+    margin-left: 10%;
+    display: flex; 
+    align-items: center; 
+}
+
+.about-me h2 {
+    margin-right: 10px; /* Add margin between h2 and p */
+    white-space: nowrap; /* Prevent line breaks */
+    padding-bottom: 20%;
+}
+
+.about-me p {
+    display: inline; /* Ensure p tag displays inline */
+}
+

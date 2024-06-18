@@ -55,19 +55,19 @@ get_header(); // Includes header.php
 
                         <div class="large-body-copy applicant-details">
                             <div class="acf">
-                                <?php if ($image) : 
-                                    echo '<div class="acf-image">';
-                                    echo '<img src="' . esc_url($image['url']) . '" alt="' . esc_attr($image['alt']) . '">'; 
-                                    echo '</div>'; 
-                                endif; ?>
-                                
+                                <?php if ($image) : ?>
+                                    <div class="acf-image">
+                                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                                    </div>
+                                <?php endif; ?>
+
                                 <div class="acf-copy">
                                     <div class="acf-species">
                                         <?php if ($species) : ?>
                                             <h2>Species:</h2>
                                             <p><?php echo esc_html($species); ?></p>
                                         <?php endif; ?>
-                                    </div>
+                                    </div><!-- .acf-species -->
 
                                     <div class="acf-skills">
                                         <?php if ($skills && is_array($skills)) : ?>
@@ -78,20 +78,20 @@ get_header(); // Includes header.php
                                                 <?php endforeach; ?>
                                             </div>
                                         <?php endif; ?>
-                                    </div>
-
-                                    <div class="acf-about-me">
-                                        <?php if ($about_me) : ?>
-                                            <h2>About Me:</h2>
-                                            <p><?php echo esc_html($about_me); ?></p>
-                                        <?php endif; ?>
-                                    </div>
+                                    </div><!-- .acf-skills -->
                                 </div><!-- .acf-copy -->
                             </div><!-- .acf -->
                         </div><!-- .applicant-details -->
+
+                        <div class="about-me large-body-copy">
+                            <?php if ($about_me) : ?>
+                                <h2>About Me:</h2>
+                                <p><?php echo esc_html($about_me); ?></p>
+                            <?php endif; ?>
+                        </div><!-- .about-me -->
                     </div><!-- .page-content -->
                 </article><!-- #post-<?php the_ID(); ?> -->
-                <?php
+        <?php
             endwhile;
         else :
             echo 'No posts found.';
