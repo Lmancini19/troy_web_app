@@ -1,0 +1,9 @@
+[17-Jun-2024 22:42:39 UTC] PHP Fatal error:  Uncaught Error: Object of class WP_Term could not be converted to string in /Users/lauramitrache/Local Sites/troywebapp/app/public/wp-includes/formatting.php:1108
+Stack trace:
+#0 /Users/lauramitrache/Local Sites/troywebapp/app/public/wp-includes/formatting.php(4682): wp_check_invalid_utf8(Object(WP_Term))
+#1 /Users/lauramitrache/Local Sites/troywebapp/app/public/wp-content/themes/troyweb_applicant/single-applicant.php(77): esc_html(Object(WP_Term))
+#2 /Users/lauramitrache/Local Sites/troywebapp/app/public/wp-includes/template-loader.php(106): include('/Users/lauramit...')
+#3 /Users/lauramitrache/Local Sites/troywebapp/app/public/wp-blog-header.php(19): require_once('/Users/lauramit...')
+#4 /Users/lauramitrache/Local Sites/troywebapp/app/public/index.php(17): require('/Users/lauramit...')
+#5 {main}
+  thrown in /Users/lauramitrache/Local Sites/troywebapp/app/public/wp-includes/formatting.php on line 1108
