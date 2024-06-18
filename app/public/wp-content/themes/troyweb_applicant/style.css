@@ -4,46 +4,43 @@ Description: Custom theme for TroyWeb Applicant
 Version: 1.0
 Author: Laura Mancini */
 
-/* Define global styles for H1 */
+/* Define global styles*/
 h1 {
     font-family: 'Lato', sans-serif;
     font-size: 48px;
     font-weight: 700;
     letter-spacing: -1px;
-    color: #E77436; /* Brand Orange */
+    color: #E77436; 
 }
 
-/* Define global styles for H2 */
 h2 {
     font-family: 'Lato', sans-serif;
     font-size: 36px;
     font-weight: 700;
     letter-spacing: -1px;
-    color: #29292E; /* Brand Dark */
+    color: #29292E; 
 }
 
-/* Define global styles for H3 */
 h3 {
     font-family: 'Lato', sans-serif;
     font-size: 32px;
     font-weight: 700;
     font-style: italic;
     letter-spacing: 1.5px;
-    color: #FFFFFF; /* White */
+    color: #FFFFFF; 
 }
 
-/* Define global styles for large body copy */
 .large-body-copy {
     font-family: 'Oldenburg', sans-serif;
     font-size: 36px;
-    color: #474852; /* Grey */
+    color: #474852; 
 }
 
-/* Define global styles for body copy */
 body {
     font-family: 'Oldenburg', sans-serif;
     font-size: 22px;
-    color: #FFFFFF; /* White */
+    color: #FFFFFF; 
+    overflow-x: hidden;
 }
 
 .header-buttons a {
@@ -80,4 +77,115 @@ body {
     color: #e77436;
     background-color: #FFFFFF;
     border: 3px solid #e77436;
+}
+
+/* Start Applicant Post CSS */
+
+.background-image {
+    height: 250px;
+    background-repeat: no-repeat; 
+    background-position: center center; 
+    background-size: cover; 
+}
+
+.entry-title {
+    display: none;
+}
+
+/* Make page full width */
+.container {
+    max-width: 2560px !important;
+    padding: 0px !important;
+}
+
+.site-header {
+    padding: 20px 30px;
+}
+
+.title-overlay {
+    transform: translateX(60%) translateY(100%);
+}
+
+.circle {
+    width: 300px; 
+    height: 300px; 
+    border: 16px solid #E77436; 
+    border-radius: 50%; 
+    background: linear-gradient(to bottom, #474852, #EFEFEF);
+    transform: translateX(45%) translateY(-30%);
+}
+
+.acf-image {
+    transform: translateX(13%) translateY(-83%);
+}
+
+.acf {
+    position: relative;
+    height: 100vw;
+}
+
+.acf-copy {
+    position: absolute;
+    bottom: 95%;
+    right: 20%;
+}
+
+.acf-species h2, 
+.acf-species p {
+    display: inline;
+    transform: skew(20deg) !important;
+    font-style: normal !important; 
+    margin-right: 12px; 
+}
+
+.acf-species p {
+    padding-top: 2%;
+}
+
+.acf-species {
+    margin-bottom: 20px;
+    margin-left: 8%;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; 
+    padding: 20px; /* Padding inside the parallelogram shape */
+    transform: skew(-20deg);
+    background-color: #F7CEB8; 
+    font-style: none;
+    width: 600px;
+}
+
+.acf-skills {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; 
+    padding: 20px; /* Padding inside the parallelogram shape */
+    transform: skew(-20deg);
+    background-color: #F7CEB8; 
+    font-style: none;
+    width: 600px;
+}
+
+.acf-skills h2 {
+    white-space: nowrap;
+    margin-right: 12px; 
+    transform: skew(20deg);
+    padding-bottom: 10%;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    max-width: calc(100% - 100px); 
+    transform: skew(20deg); 
+    list-style: none; 
+    padding: 0;
+}
+
+.skill-item {
+    display: inline-block;
+    border-radius: 5px; 
+    margin-right: 5px; 
+    white-space: nowrap; 
 }
