@@ -233,25 +233,22 @@ function troyweb_register_menus() {
 add_action('after_setup_theme', 'troyweb_register_menus');
 
 
-// Register theme supports for the theme.
-function troyweb_register_theme_supports() {
-    // Add support for custom logos
-    add_theme_support('custom-logo', array(
-        'header-logo' => array(
-            'height'      => 100,
-            'width'       => 400,
-            'flex-height' => true,
-            'flex-width'  => true,
-            'header-text' => array('site-title', 'site-description'),
-        ),
-        'footer-logo' => array(
-            'height'      => 60,
-            'width'       => 60,
-            'flex-height' => true,
-            'flex-width'  => true,
-        ),
+// Register theme supports for custom logos
+function custom_theme_supports() {
+    add_theme_support('custom-header', array(
+        'height'      => 480,
+        'width'       => 720,
+        'flex-height' => true,
+        'flex-width'  => true,
+        'header-text' => array('site-title', 'site-description'),
+    ));
+
+    add_theme_support( 'custom-logo', array(
+        'height'      => 480,
+        'width'       => 720,
+        'flex-height' => true,
+        'flex-width'  => true,
+        'header-text' => array('site-title', 'site-description'),
     ));
 }
-
-// Hook the function to the after_setup_theme action
-add_action('after_setup_theme', 'troyweb_register_theme_supports');
+add_action('after_setup_theme', 'custom_theme_supports');

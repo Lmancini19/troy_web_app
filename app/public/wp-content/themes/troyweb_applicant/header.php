@@ -20,18 +20,25 @@
                 <!-- Site Branding / Logo Section -->
                 <div class="col-md-auto">
                     <div class="site-branding">
-                        <?php if (function_exists('the_custom_logo')) : ?>
-                            <?php $custom_logo_id = get_theme_mod('custom_logo'); ?>
-                            <?php $logo = wp_get_attachment_image_src($custom_logo_id, 'full'); ?>
-                            <a href="<?php echo esc_url(home_url('/')); ?>" class="custom-logo-link" rel="home">
-                                <!-- Adjusting logo size using inline style -->
-                                <img src="<?php echo esc_url($logo[0]); ?>" class="custom-logo" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" style="height: 60px; width: auto;">
-                            </a>
+                        <?php if (get_theme_support('custom-header')) : ?>
+                            <?php
+                            $custom_header = get_theme_support('custom-header');
+                            $header_image = get_header_image();
+                            ?>
+                            <?php if ($header_image) : ?>
+                                <a href="<?php echo esc_url(home_url('/')); ?>" class="custom-header-link" rel="home">
+                                    <!-- Adjusting header image size using inline style -->
+                                    <img src="<?php echo esc_url($header_image); ?>" class="custom-header-image" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" style="height: auto; max-width: 100%;">
+                                </a>
+                            <?php else : ?>
+                                <a href="<?php echo esc_url(home_url('/')); ?>" class="site-title"><?php bloginfo('name'); ?></a>
+                            <?php endif; ?>
                         <?php else : ?>
                             <a href="<?php echo esc_url(home_url('/')); ?>" class="site-title"><?php bloginfo('name'); ?></a>
                         <?php endif; ?>
                     </div>
                 </div>
+
                 
                 <!-- Navigation Section -->
                 <div class="col">

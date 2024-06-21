@@ -5,6 +5,7 @@ Version: 1.0
 Author: Laura Mancini */
 
 /* Define global styles*/
+
 h1 {
     font-family: 'Lato', sans-serif;
     font-size: 48px;
@@ -32,14 +33,13 @@ h3 {
 
 .large-body-copy {
     font-family: 'Oldenburg', sans-serif;
-    font-size: 36px;
+    font-size: 30px;
     color: #474852; 
 }
 
-body {
-    font-family: 'Oldenburg', sans-serif;
-    font-size: 22px;
-    color: #FFFFFF; 
+.site-main {
+    max-width: 100vw;
+    padding: 0px !important;
     overflow-x: hidden;
 }
 
@@ -48,6 +48,7 @@ body {
 }
 
 /* Menu Items Styling */
+
 .menu-item {
     font-family: 'Lato', sans-serif;
     font-size: 24px;
@@ -60,7 +61,17 @@ body {
     color: #e77436;
 }
 
+.site-header {
+    padding: 20px 30px;
+}
+
+footer {
+    padding: 20px 20px;
+    margin-top: 10%;
+}
+
 /* Button Styling */
+
 .button {
     font-family: 'Lato', sans-serif;
     font-size: 24px;
@@ -79,7 +90,7 @@ body {
     border: 3px solid #e77436;
 }
 
-/* Start Applicant Post CSS */
+/* Post Title Section CSS */
 
 .background-image {
     height: 250px;
@@ -88,123 +99,343 @@ body {
     background-size: cover; 
 }
 
-.entry-title {
-    display: none;
-}
-
-/* Make page full width */
-.container {
-    max-width: 2560px !important;
-    padding: 0px !important;
-}
-
-.site-header {
-    padding: 20px 30px;
+.title-section {
+    margin-bottom: -15%;
 }
 
 .title-overlay {
     transform: translateX(60%) translateY(100%);
 }
 
+/* First Section CSS */
+
+.first-section-container img {
+    position: relative;
+    z-index: 1000;
+    margin-top: -15%;
+    margin-left: 30%;
+}
+
 .circle {
+    position: relative;
     width: 300px; 
     height: 300px; 
     border: 16px solid #E77436; 
     border-radius: 50%; 
     background: linear-gradient(to bottom, #474852, #EFEFEF);
     transform: translateX(45%) translateY(-30%);
-}
-
-.acf-image {
-    transform: translateX(13%) translateY(-83%);
-}
-
-.acf {
-    position: relative;
-    height: 200px;
-}
-
-.acf-copy {
-    position: absolute;
-    bottom: 80%;
-    right: 20%;
-}
-
-.acf-species h2, 
-.acf-species p {
-    display: inline;
-    transform: skew(20deg) !important;
-    font-style: normal !important; 
-    margin-right: 12px; 
-}
-
-.acf-species p {
-    padding-top: 2%;
+    z-index: 1;
 }
 
 .acf-species {
-    margin-bottom: 20px;
-    margin-left: 8%;
-    display: flex;
-    flex-wrap: wrap; 
-    align-items: center; 
-    padding: 20px; /* Padding inside the parallelogram shape */
-    transform: skew(-20deg);
-    background-color: #F7CEB8; 
-    font-style: none;
-    width: 600px;
+    background-color: #F7CEB8;
+    width: 560px;
+    height: 100px;
+    transform: skewX(-20deg);
 }
 
 .acf-skills {
-    display: flex;
-    flex-wrap: wrap; 
-    align-items: center; 
-    padding: 20px; /* Padding inside the parallelogram shape */
-    transform: skew(-20deg);
-    background-color: #F7CEB8; 
-    font-style: none;
-    width: 600px;
+    background-color: #F7CEB8;
+    width: 560px;
+    height: 130px;
+    transform: skewX(-20deg);
+    margin-left: -5%;
 }
 
+.acf-species,
+.acf-skills {
+    margin-bottom: 10%; 
+}
+
+.acf-species h2,
 .acf-skills h2 {
-    white-space: nowrap;
-    margin-right: 12px; 
-    transform: skew(20deg);
-    padding-bottom: 10%;
+    display: inline-block;
+    vertical-align: top; 
+    margin-top: 5%;
+    margin-left: 5%;
+    transform: skewX(20deg);
+}
+
+.acf-species p,
+.skills-list {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    margin-top: 6%;
+    transform: skewX(20deg);
 }
 
 .skills-list {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 10px; 
-    max-width: calc(100% - 100px); 
-    transform: skew(20deg); 
-    list-style: none; 
-    padding: 0;
+    margin-top: 4% !important;
+    margin-left: 4px;
+}
+
+.skill-group {
+    margin-bottom: -4%;
 }
 
 .skill-item {
     display: inline-block;
-    border-radius: 5px; 
-    margin-right: 5px; 
-    white-space: nowrap; 
+    margin-right: 10px; 
+    margin-bottom: 5px; 
+    padding: 5px 10px;
 }
 
+/* About Me CSS */
+
 .about-me {
-    position: absolute;
-    right: 10%;
-    margin-left: 10%;
-    display: flex; 
-    align-items: center; 
+    text-align: left; 
+    width: 1000px;
+    margin-left: -20%;
+    margin-top: 10%;
 }
 
 .about-me h2 {
-    margin-right: 10px; /* Add margin between h2 and p */
-    white-space: nowrap; /* Prevent line breaks */
-    padding-bottom: 20%;
+    display: inline;
+    margin-bottom: 10px; 
 }
 
 .about-me p {
-    display: inline; /* Ensure p tag displays inline */
+    display: inline;
+    margin: 0; 
 }
 
+/* Core Values CSS */
+
+.core-values-h2 {
+    margin-top: 10%;
+    margin-bottom: -10%;
+    margin-left: 15%;
+}
+
+.core-values-section {
+    background-color: #E77436; 
+    background-size: cover;     
+    background-repeat: no-repeat; 
+    background-position: center;
+    padding: 50px 0; 
+    margin-top: 10%;
+}
+
+.core-values-section h2 {
+    font-style: italic;
+    margin: 20px;
+}
+
+.core-value {
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+
+.core-value-image {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;       
+    justify-content: center;
+    align-items: center; 
+    max-width: 100%;
+}
+
+.core-value-caption p {
+    margin-top: 10px; 
+    font-family: 'Oldenburg', sans-serif;
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Experience Section */
+
+.experience-section {
+    margin-top: 10%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 20px;
+}
+
+.experience-section .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.experience-content {
+    display: flex; 
+    align-items: center;
+}
+
+.experience-content h2 {
+    margin-right: 10px; 
+    align-self: flex-start;
+}
+
+/* Mobile Styling */
+
+@media all and (max-width: 800px) {
+
+.header-buttons {
+    display: none !important;
+}
+
+.navbar-toggler {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+.large-body-copy {
+    font-size: 18px; 
+}
+
+.title-overlay {
+    transform: none;
+    text-align: center;
+    padding-top: 10%;
+    line-height: 0.2em;
+}
+
+.circle {
+    position: absolute;
+    left: -5px;
+    margin-top: -5%;
+    width: 250px; 
+    height: 250px; 
+}
+
+.first-section-container img {
+    height: 350px;
+    margin-top: 2%;
+    right: -4%;
+}
+
+
+.acf-species {
+    width: 330px;
+    height: 70px;
+    margin-left: 15% !important;
+}
+
+.acf-skills {
+    width: 350px;
+    height: 100px;
+}
+
+.acf-species,
+.acf-skills {
+    margin-bottom: 5%; 
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.acf-species h2,
+.acf-skills h2 {
+    display: inline-block;
+    vertical-align: top; 
+    margin-top: 5%;
+    margin-left: 6%;
+    transform: skewX(20deg);
+}
+
+.acf-species p,
+.skills-list {
+    margin-top: 4%;
+}
+
+.about-me {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    text-align: center;
+}
+
+.core-values-h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+    margin-bottom: -5%;
+    margin-left: 0;
+}
+
+/* Experience section styles */
+.experience-section {
+    margin-top: 10%;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Flexbox layout for columns */
+.experience-section .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.experience-section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.experience-content h2 {
+    margin-bottom: 10px;
+    align-self: center;
+    margin-top: 10%;
+}
+
+.experience-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience-list li {
+    margin-bottom: 5px;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.experience-image {
+    margin-top: 20px;
+    display: block;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+}
